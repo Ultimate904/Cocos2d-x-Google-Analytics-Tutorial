@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+    <string name="app_name">GoogleAnalyticsTutorial</string>
+    <string name="ga_key">YOUR_KEY</string>
+</resources>
+

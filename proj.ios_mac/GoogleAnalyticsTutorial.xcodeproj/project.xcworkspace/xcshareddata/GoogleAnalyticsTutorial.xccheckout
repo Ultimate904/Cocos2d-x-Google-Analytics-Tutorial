@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>10DA64E0-4DDB-4B6E-B91F-7EFD99620F05</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GoogleAnalyticsTutorial</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26355D65209C7BF9AD3451A0897BDDF028417DEF</key>
+		<string>https://github.com/Ultimate904/Cocos2d-x-Google-Analytics-Tutorial.git</string>
+		<key>47BF2D4B50CAB48D53AFD5AB116AE4D72E048919</key>
+		<string>git.inostudio.net:v.peschenkov/googleanalyticstutorial.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.ios_mac/GoogleAnalyticsTutorial.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26355D65209C7BF9AD3451A0897BDDF028417DEF</key>
+		<string>../../..</string>
+		<key>47BF2D4B50CAB48D53AFD5AB116AE4D72E048919</key>
+		<string>../../../../googleanalyticstutorial.git</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Ultimate904/Cocos2d-x-Google-Analytics-Tutorial.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26355D65209C7BF9AD3451A0897BDDF028417DEF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26355D65209C7BF9AD3451A0897BDDF028417DEF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cocos2d-x-Google-Analytics-Tutorial.git</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47BF2D4B50CAB48D53AFD5AB116AE4D72E048919</string>
+			<key>IDESourceControlWCCName</key>
+			<string>googleanalyticstutorial.git</string>
+		</dict>
+	</array>
+</dict>
+</plist>

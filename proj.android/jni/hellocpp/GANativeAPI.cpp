@@ -1,0 +1,86 @@
+//
+// Copyright 2015 Inostudio Solutions
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+#include "GANativeAPI.h"
+#include "platform/android/jni/JniHelper.h"
+#include <jni.h>
+
+
+#define CLASS_NAME "net/inostudio/googleanalyticstutorial/GANativeAPI"
+
+void GANativeAPI::trackScreenEvent(const std::string &name)
+{
+    cocos2d::JniMethodInfo minfo;
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "trackScreenEvent", "(Ljava/lang/String;)V");
+    if(isHave)
+    {
+        jstring jstringName = minfo.env->NewStringUTF(name.c_str());
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, jstringName);
+        minfo.env->DeleteLocalRef(jstringName);
+    }
+}
+
+void GANativeAPI::trackEvent(const std::string &category, const std::string &action, const std::string &label, int value)
+{
+    cocos2d::JniMethodInfo minfo;
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "trackEvent", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V");
+    if(isHave)
+    {
+        jstring jstringCategory = minfo.env->NewStringUTF(category.c_str());
+        jstring jstringAction   = minfo.env->NewStringUTF(action.c_str());
+        jstring jstringLabel    = minfo.env->NewStringUTF(label.c_str());
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, jstringCategory, jstringAction, jstringLabel, value);
+        minfo.env->DeleteLocalRef(jstringLabel);
+        minfo.env->DeleteLocalRef(jstringAction);
+        minfo.env->DeleteLocalRef(jstringCategory);
+    }
+}
+
+void GANativeAPI::trackSocialEvent(const std::string &name, const std::string &action, const std::string &targetUrl)
+{
+    cocos2d::JniMethodInfo minfo;
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "trackSocialEvent", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
+    if(isHave)
+    {
+        jstring jstringName         = minfo.env->NewStringUTF(name.c_str());
+        jstring jstringAction       = minfo.env->NewStringUTF(action.c_str());
+        jstring jstringTargetUrl    = minfo.env->NewStringUTF(targetUrl.c_str());
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, jstringName, jstringAction, jstringTargetUrl);
+        minfo.env->DeleteLocalRef(jstringName);
+        minfo.env->DeleteLocalRef(jstringAction);
+        minfo.env->DeleteLocalRef(jstringTargetUrl);
+    }
+}
+
+void GANativeAPI::startSession()
+{
+    cocos2d::JniMethodInfo minfo;
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "startSession", "()V");
+    if(isHave)
+    {
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+    }
+}
+
+void GANativeAPI::endSession()
+{
+    cocos2d::JniMethodInfo minfo;
+    bool isHave = cocos2d::JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "endSession", "()V");
+    if(isHave)
+    {
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+    }
+}
